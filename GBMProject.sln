@@ -15,21 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3DE342
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C80F9753-950D-499C-85FD-F23AD3D52920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Business.Client", "..\GBMProject.Business.Client\GBMProject.Business.Client.csproj", "{56636B2F-64EF-46AD-B237-6489D6A78DA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Business.Client", "GBMProject.Business.Client\GBMProject.Business.Client.csproj", "{56636B2F-64EF-46AD-B237-6489D6A78DA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Business.Contracts", "..\GBMProject.Business.Contracts\GBMProject.Business.Contracts.csproj", "{07D423E2-C2D5-4849-AED1-4A62226D4A41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Business.Contracts", "GBMProject.Business.Contracts\GBMProject.Business.Contracts.csproj", "{07D423E2-C2D5-4849-AED1-4A62226D4A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Data", "..\GBMProject.Data\GBMProject.Data.csproj", "{E85BD319-2A42-48E6-833C-4CFC679B5704}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Data", "GBMProject.Data\GBMProject.Data.csproj", "{E85BD319-2A42-48E6-833C-4CFC679B5704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Factory", "..\GBMProject.Factory\GBMProject.Factory.csproj", "{3E775001-D6EF-4DB6-9CBA-0BC25CE89E0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Factory", "GBMProject.Factory\GBMProject.Factory.csproj", "{3E775001-D6EF-4DB6-9CBA-0BC25CE89E0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Console.Host", "..\GBMProject.Console.Host\GBMProject.Console.Host.csproj", "{24047C06-C118-4025-82A3-E325193E4844}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Console.Host", "GBMProject.Console.Host\GBMProject.Console.Host.csproj", "{24047C06-C118-4025-82A3-E325193E4844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Entities", "..\GBMProject.Entities\GBMProject.Entities.csproj", "{46A4EF9C-BB54-4C29-B534-FEA036D044D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Entities", "GBMProject.Entities\GBMProject.Entities.csproj", "{46A4EF9C-BB54-4C29-B534-FEA036D044D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Framework", "..\GBMProject.Framework\GBMProject.Framework.csproj", "{F79F681E-4677-44C1-BB68-CC511E8F4399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Framework", "GBMProject.Framework\GBMProject.Framework.csproj", "{F79F681E-4677-44C1-BB68-CC511E8F4399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Test", "..\GBMProject.Test\GBMProject.Test.csproj", "{5466EE20-9711-4934-A699-9EE857561920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GBMProject.Test", "GBMProject.Test\GBMProject.Test.csproj", "{5466EE20-9711-4934-A699-9EE857561920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
