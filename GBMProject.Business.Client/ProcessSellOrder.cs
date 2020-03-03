@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace GBMProject.Business.Client
 {
-    internal class ProcessSellOrder
+    public class ProcessSellOrder
     {
         private readonly string INSUFFICIENT_BALANCE_CODE = "INSUFFICIENT_BALANCE";
         private readonly string INSUFFICIENT_STOCKS_CODE = "INSUFFICIENT_STOCKS";

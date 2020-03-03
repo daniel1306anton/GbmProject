@@ -1,4 +1,5 @@
-﻿using GBMProject.Entities.Common;
+﻿using GBMProject.Business.Client.CoreFiles;
+using GBMProject.Entities.Common;
 using GBMProject.Entities.Request;
 using GBMProject.Entities.Response;
 using System.Collections.Generic;
@@ -6,12 +7,12 @@ using System.Linq;
 
 namespace GBMProject.Business.Client
 {
-    internal class HandleSellOrderDto
-    {
+    public class ExecutionSellOrder
+    {        
         private readonly ProcessSellOrder processSellOrder;
         private readonly ValidateSellOrderBusinessRules validateSellOrderBusinessRules;
         private readonly List<ErrorDto> messageErrorList;
-        internal HandleSellOrderDto(ProcessSellOrder processSellOrder, ValidateSellOrderBusinessRules validateSellOrderBusinessRules)
+        public ExecutionSellOrder(ProcessSellOrder processSellOrder, ValidateSellOrderBusinessRules validateSellOrderBusinessRules, ProcessorFilesRequest processorFilesRequest)
         {
             this.processSellOrder = processSellOrder;
             this.validateSellOrderBusinessRules = validateSellOrderBusinessRules;

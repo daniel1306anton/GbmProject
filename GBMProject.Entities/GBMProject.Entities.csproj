@@ -45,12 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ErrorDto.cs" />
+    <Compile Include="Common\FileNameDto.cs" />
     <Compile Include="GbmDto\CurrentBalanceDto.cs" />
     <Compile Include="GbmDto\InitialBalanceDto.cs" />
     <Compile Include="GbmDto\IssuerDto.cs" />
     <Compile Include="GbmDto\OrderDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\SellOrdersRequestDto.cs" />
+    <Compile Include="Response\RobotResponseDto.cs" />
     <Compile Include="Response\SellOrderResponseDto.cs" />
   </ItemGroup>
   <ItemGroup>

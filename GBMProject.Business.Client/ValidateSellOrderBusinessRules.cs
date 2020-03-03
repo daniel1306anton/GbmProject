@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GBMProject.Business.Client
 {
-    internal class ValidateSellOrderBusinessRules
+    public class ValidateSellOrderBusinessRules
     {
         private readonly IEnumerable<string> validOperation = new List<string>() { "BUY", "SELL"};
         private readonly string SELL_OPERATION = "SELL";

@@ -44,7 +44,9 @@
     <Compile Include="OperationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IDeserialize.cs" />
+    <Compile Include="Repository\IFileManager.cs" />
     <Compile Include="Repository\ISerialize.cs" />
+    <Compile Include="Values\IDirectoryPathConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GBMProject.Entities\GBMProject.Entities.csproj">
