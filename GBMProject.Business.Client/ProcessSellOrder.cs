@@ -15,7 +15,7 @@ namespace GBMProject.Business.Client
         private CurrentBalanceDto currentBalance;
         internal OperationResult<CurrentBalanceDto> Execute(SellOrdersRequestDto request)
         {
-            currentBalance = (CurrentBalanceDto)request.InitialBalance;
+            currentBalance = CurrentBalanceDto.ConvertFromInitialBalance(request.InitialBalance);
             if (!request.OrderList.Any()) return new OperationResult<CurrentBalanceDto>(currentBalance);
             messageErrorList = new List<ErrorDto>();
             var orderList = request.OrderList.OrderBy(x => x.TimeStamp).ToList();
@@ -49,7 +49,7 @@ namespace GBMProject.Business.Client
                         {
                             var cashOperation = order.SharePrice * order.TotalShares;
                             currentBalance.Cash = currentBalance.Cash + cashOperation;
-                            x.TotalShares = x.TotalShares + order.TotalShares;
+                            x.TotalShares = x.TotalShares - order.TotalShares;
                         }
 
                     }

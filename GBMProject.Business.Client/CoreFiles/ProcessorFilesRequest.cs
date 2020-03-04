@@ -7,7 +7,7 @@ using System.IO;
 
 namespace GBMProject.Business.Client.CoreFiles
 {
-    public class ProcessorFilesRequest
+    public class ProcessorFilesRequest 
     {
         private readonly IDirectoryPathConfig directoryPath;
         private readonly IFileManager fileManager;

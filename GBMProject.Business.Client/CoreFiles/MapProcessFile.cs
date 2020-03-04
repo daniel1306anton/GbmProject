@@ -44,7 +44,7 @@ namespace GBMProject.Business.Client.CoreFiles
         {
             if(fileLines == null || fileLines.Count() != 2)
             {
-                return new OperationResult<SellOrdersRequestDto>(ErrorDto.BuildTechnical("Structure file {0}, is incorrect"));
+                return new OperationResult<SellOrdersRequestDto>(ErrorDto.BuildUser("Structure file {0}, is incorrect"));
             }
 
             var lineInitialBalance = fileLines.ToArray()[0];

@@ -17,7 +17,7 @@ namespace GBMProject.Business.Client
         private readonly TimeSpan InitialHourDay = TimeSpan.Parse("06:00");
         private readonly TimeSpan FinalHourDay = TimeSpan.Parse("15:00");
 
-        private readonly string INSUFFICIENT_BALANCE_CODE = "INSUFFICIENT_BALANCE";
+        
         private readonly string DUPLICATED_OPERATION_CODE = "DUPLICATED_OPERATION";
         private readonly string CLOSED_MARKET_CODE = "CLOSED_MARKET";
         private readonly string INSUFFICIENT_STOCKS_CODE = "INSUFFICIENT_STOCKS";
@@ -54,7 +54,7 @@ namespace GBMProject.Business.Client
 
             foreach (var item in goodOrderGroup)
             {
-                if(item.Any(x => x.Operation == SELL_OPERATION) && !request.InitialBalance.IssuerList.Any(x => x.IssuerName == x.IssuerName))
+                if(item.Any(x => x.Operation == SELL_OPERATION) && !request.InitialBalance.IssuerList.Any(x => x.IssuerName == item.Key))
                 {
                     
                     messageErrorList.Add(ErrorDto.BuildUser(
@@ -71,7 +71,7 @@ namespace GBMProject.Business.Client
                 goodOrder.AddRange(indexOrder.Where(x =>
                 {
                     var correct = true;
-                    if (indexOrder.Any(z => z.indx != x.indx && z.order.StayFiveMinutes(x.order.TimeStamp))) {
+                    if (indexOrder.Any(z => z.indx != x.indx && z.order.Operation == x.order.Operation && z.order.StayFiveMinutes(x.order.TimeStamp))) {
                         correct = false;
                         messageErrorList.Add(ErrorDto.BuildUser(
                             string.Format("Issuer {0} with timestamp {1} is duplicated with another records.", x.order.IssuerName, x.order.TimeStamp),

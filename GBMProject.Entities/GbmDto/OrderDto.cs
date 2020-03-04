@@ -24,7 +24,7 @@ namespace GBMProject.Entities.GbmDto
             var moreFiveMinutes = TimeStamp.Add(new TimeSpan(0, 5, 0));
             var lessFiveMinutes = TimeStamp.Subtract(new TimeSpan(0, 5, 0));
 
-            return !(timeStampReq >= moreFiveMinutes && timeStampReq <= lessFiveMinutes);
+            return (timeStampReq >= lessFiveMinutes && timeStampReq <= moreFiveMinutes);
         }
     }
 }

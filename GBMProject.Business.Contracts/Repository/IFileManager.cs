@@ -15,7 +15,7 @@ namespace GBMProject.Business.Contracts.Repository
         OperationResult MoveFile(string sourceDirectory, string destinationDirectory);
         
         OperationResult<IEnumerable<string>> ReadLines(FileSystemInfo file);
-        OperationResult<List<string>> GetFiles(string directory);
+        OperationResult<IEnumerable<string>> GetFiles(string directory);
         OperationResult<IEnumerable<string>> ReadLines(string filePath);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using GBMProject.Business.Client.CoreFiles;
+using GBMProject.Business.Contracts;
 using GBMProject.Entities.Common;
 using GBMProject.Entities.Response;
 using System;
@@ -12,11 +13,13 @@ namespace GBMProject.Business.Client
     public class HandleSellOrder
     {
         private readonly ProcessorFilesRequest processorFilesRequest;
+        private readonly ProcessorFilesResponse processorFilesResponse;
         private readonly MapProcessFile mapProcessFile;
-        private readonly ExecutionSellOrder executionSellOrder;
-        public HandleSellOrder(ProcessorFilesRequest processorFilesRequest, MapProcessFile mapProcessFile, ExecutionSellOrder executionSellOrder)
+        private readonly IExecutionSellOrder executionSellOrder;
+        public HandleSellOrder(ProcessorFilesRequest processorFilesRequest, ProcessorFilesResponse processorFilesResponse, MapProcessFile mapProcessFile, IExecutionSellOrder executionSellOrder)
         {
             this.processorFilesRequest = processorFilesRequest;
+            this.processorFilesResponse = processorFilesResponse;
             this.mapProcessFile = mapProcessFile;
             this.executionSellOrder = executionSellOrder;
         }
@@ -40,11 +43,13 @@ namespace GBMProject.Business.Client
                 var fileOperation = mapProcessFile.ProcessFile(fileName);
                 if (fileOperation.Failure)
                 {
-                    response.AddErrorList(fileOperation.ErrorList?.ToList());
+                    processorFilesResponse.GenerateResponseWithError(fileName, fileOperation.ErrorList?.ToList());
+                    response.AddErrorList(fileOperation.ErrorList?.ToList());                    
                     continue;
                 }
                 var fileNameRequest = fileOperation.Result;
                 fileNameRequest.SellOrderResponse = executionSellOrder.Execute(fileNameRequest.SellOrdersRequest);
+                processorFilesResponse.GenerateResponse(fileName);
             }
           
             return response;

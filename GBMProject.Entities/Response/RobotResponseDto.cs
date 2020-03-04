@@ -11,7 +11,7 @@ namespace GBMProject.Entities.Response
     {
         public RobotResponseDto(List<ErrorDto> errorList = null)
         {
-            Success = errorList == null && errorList.Any();
+            Success = errorList == null || !errorList.Any();
             ErrorList = errorList;
             Messages = new List<string>();
         }

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CoreFiles\MapProcessFile.cs" />
     <Compile Include="CoreFiles\ProcessorFilesRequest.cs" />
+    <Compile Include="CoreFiles\ProcessorFilesResponse.cs" />
     <Compile Include="ExecutionSellOrder.cs" />
     <Compile Include="HandleSellOrder.cs" />
     <Compile Include="ProcessSellOrder.cs" />

@@ -87,16 +87,16 @@ namespace GBMProject.Data
                 return new OperationResult<IEnumerable<string>>(default(IEnumerable<string>), false);
             }
         }
-        public OperationResult<List<string>> GetFiles(string directory)
+        public OperationResult<IEnumerable<string>> GetFiles(string directory)
         {
             try
             {
                 var files = new DirectoryInfo(directory).GetFiles().Select(x => x.Name).ToList();
-                return new OperationResult<List<string>>(files, true);
+                return new OperationResult<IEnumerable<string>>(files, true);
             }
             catch (Exception ex)
             {                
-                return new OperationResult<List<string>>(default(List<string>), false);
+                return new OperationResult<IEnumerable<string>>(default(List<string>), false);
             }
         }
     }

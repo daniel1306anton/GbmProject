@@ -19,21 +19,20 @@ namespace GBMProject.Entities.Common
             FileInfoName = fileInfoName;
         }
         public string FileInfoName { get; set; }
-        public string FileInfoNameResponse { get; set; }
-        public string FileInfoNameResponseError { get; set; }
+        
         public bool IsValid { get; set; }
         public SellOrdersRequestDto SellOrdersRequest { get; set; }
         public SellOrderResponseDto SellOrderResponse { get; set; }
-        public void BuildNameResponse()
+        public string BuildNameResponse()
         {
             var dateTimeStr = DateTime.Now.ToString("yyMMddHHmmss");
-            FileInfoNameResponse = FileInfoName + dateTimeStr + "_RES";
+            return FileInfoName + dateTimeStr + "_RES";
         }
         
-        public void BuildNameErrorResponse()
+        public string BuildNameErrorResponse()
         {
             var dateTimeError = DateTime.Now.ToString("yyMMddHHmmss");
-            FileInfoNameResponseError = FileInfoName + dateTimeError + "_RES.ERR";           
+            return FileInfoName + dateTimeError + "_RES.ERR";           
         }      
     }
 }
