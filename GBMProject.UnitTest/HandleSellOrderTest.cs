@@ -9,11 +9,8 @@ using GBMProject.Entities.Request;
 using GBMProject.Entities.Response;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.UnitTest
 {
@@ -176,13 +173,13 @@ namespace GBMProject.UnitTest
                 .Returns(
                 new OperationResult(true));
 
-            deserialize.Setup(x => x.Execute<InitialBalanceDto> (It.IsAny<string>()))
-                .Returns(BuildOperationResultForTest<InitialBalanceDto>.OperationGetItemThecnical
+            deserialize.Setup(x => x.Execute<InitialBalanceJsonDto> (It.IsAny<string>()))
+                .Returns(BuildOperationResultForTest<InitialBalanceJsonDto>.OperationGetItemThecnical
                      (SettingToHandle.InitializeInitialBalance,  successDeserializeInitialBalance));
 
-            deserialize.Setup(x => x.Execute<IEnumerable<OrderDto>>(It.IsAny<string>()))
-                .Returns(BuildOperationResultForTest<OrderDto>.OperationGetList
-                     (SettingToHandle.InitializeOrderList, false, successDeserializeOrderList));
+            deserialize.Setup(x => x.Execute<OrderDto>(It.IsAny<string>()))
+                .Returns(BuildOperationResultForTest<OrderDto>.OperationGetItemThecnical
+                     (SettingToHandle.InitializeOrderList.FirstOrDefault(),  successDeserializeOrderList));
 
             executionSellOrder.Setup(x => x.Execute(It.IsAny<SellOrdersRequestDto>()))
                 .Returns(successExecutionSellOrder ? SettingToHandle.InitializeSellOrderResponse : SettingToHandle.InitializeSellOrderWithErrorResponse);

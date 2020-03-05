@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Json\JsonDeserialize.cs" />
     <Compile Include="Json\JsonSerialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

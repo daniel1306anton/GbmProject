@@ -1,15 +1,10 @@
-﻿using GBMProject.Business.Contracts;
-using GBMProject.Business.Contracts.Repository;
+﻿using GBMProject.Business.Contracts.Repository;
 using GBMProject.Business.Contracts.Values;
 using GBMProject.Entities.Common;
-using GBMProject.Entities.GbmDto;
 using GBMProject.Entities.Response;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.Business.Client.CoreFiles
 {

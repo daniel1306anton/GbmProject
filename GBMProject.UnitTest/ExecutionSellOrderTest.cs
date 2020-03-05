@@ -1,6 +1,4 @@
-﻿using System;
-using GBMProject.Business.Client;
-using GBMProject.Entities.Response;
+﻿using GBMProject.Business.Client;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GBMProject.UnitTest

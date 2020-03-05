@@ -43,12 +43,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellOrderFactory.cs" />
     <Compile Include="SettingValue\DirectoryPathConfig.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GBMProject.Business.Client\GBMProject.Business.Client.csproj">
+      <Project>{56636B2F-64EF-46AD-B237-6489D6A78DA4}</Project>
+      <Name>GBMProject.Business.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GBMProject.Business.Contracts\GBMProject.Business.Contracts.csproj">
       <Project>{07D423E2-C2D5-4849-AED1-4A62226D4A41}</Project>
       <Name>GBMProject.Business.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBMProject.Data\GBMProject.Data.csproj">
+      <Project>{E85BD319-2A42-48E6-833C-4CFC679B5704}</Project>
+      <Name>GBMProject.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBMProject.Entities\GBMProject.Entities.csproj">
+      <Project>{46A4EF9C-BB54-4C29-B534-FEA036D044D9}</Project>
+      <Name>GBMProject.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBMProject.Framework\GBMProject.Framework.csproj">
+      <Project>{F79F681E-4677-44C1-BB68-CC511E8F4399}</Project>
+      <Name>GBMProject.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

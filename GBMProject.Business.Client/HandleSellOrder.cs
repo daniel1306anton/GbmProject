@@ -2,11 +2,8 @@
 using GBMProject.Business.Contracts;
 using GBMProject.Entities.Common;
 using GBMProject.Entities.Response;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.Business.Client
 {

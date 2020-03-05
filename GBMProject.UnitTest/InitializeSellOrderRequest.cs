@@ -27,7 +27,7 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="TOT",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(0,12,0),
+                    TimeStamp = new DateTime(2020,1,1,0,12,0),
                     TotalShares = 22
                 }
 
@@ -51,7 +51,7 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(21,12,0),
+                    TimeStamp = new DateTime(2020,1,1,21,12,0),
                     TotalShares = 22
                 }
 
@@ -76,7 +76,7 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp =new DateTime(2020,1,1,14,12,0),
                     TotalShares = 22
                 }
 
@@ -101,35 +101,35 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 22
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 22
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 22
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,16,0),
+                    TimeStamp = new DateTime(2020,1,1,14,16,0),
                     TotalShares = 22
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 22,
-                    TimeStamp = new TimeSpan(14,8,0),
+                    TimeStamp = new DateTime(2020,1,1,14,8,0),
                     TotalShares = 22
                 }
 
@@ -154,7 +154,7 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 100
                 }
 
@@ -179,7 +179,7 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 1000
                 }
 
@@ -210,28 +210,28 @@ namespace GBMProject.UnitTest
                     IssuerName = "GBM",
                     Operation="BUY",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 100
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 20
                 },
                 new OrderDto(){
                     IssuerName = "GBM",
                     Operation="SELL",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,18,0),
+                    TimeStamp = new DateTime(2020,1,1,14,18,0),
                     TotalShares = 20
                 },
                 new OrderDto(){
                     IssuerName = "GBM_2",
                     Operation="SELL",
                     SharePrice = 12,
-                    TimeStamp = new TimeSpan(14,12,0),
+                    TimeStamp = new DateTime(2020,1,1,14,12,0),
                     TotalShares = 20
                 }
             }

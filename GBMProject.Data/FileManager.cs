@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.Data
 {
@@ -31,20 +29,6 @@ namespace GBMProject.Data
             return new OperationResult(true);
         }
 
-
-        public OperationResult MoveFile(FileInfo file, string destinationDirectory)
-        {
-            try
-            {
-                file.MoveTo(destinationDirectory);
-
-            }
-            catch (Exception ex)
-            {
-                return new OperationResult(false);
-            }
-            return new OperationResult(true);
-        }
         public OperationResult MoveFile(string sourceDirectory, string destinationDirectory)
         {
             try
@@ -57,22 +41,7 @@ namespace GBMProject.Data
                 return new OperationResult(false);
             }
             return new OperationResult(true);
-        }
-
-        public OperationResult<IEnumerable<string>> ReadLines(FileSystemInfo file)
-        {
-            try
-            {
-                return new OperationResult<IEnumerable<string>>(File.ReadLines(file.FullName));
-
-            }
-            catch (Exception ex)
-            {
-
-                return new OperationResult<IEnumerable<string>>(default(IEnumerable<string>), false);
-            }
-        }
-
+        }       
 
         public OperationResult<IEnumerable<string>> ReadLines(string filePath)
         {

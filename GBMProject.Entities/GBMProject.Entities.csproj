@@ -48,6 +48,7 @@
     <Compile Include="Common\FileNameDto.cs" />
     <Compile Include="GbmDto\CurrentBalanceDto.cs" />
     <Compile Include="GbmDto\InitialBalanceDto.cs" />
+    <Compile Include="GbmDto\InitialBalanceJsonDto.cs" />
     <Compile Include="GbmDto\IssuerDto.cs" />
     <Compile Include="GbmDto\OrderDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

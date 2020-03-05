@@ -48,21 +48,12 @@ namespace GBMProject.Business.Contracts
             Result = result;
         }
 
-        public OperationResult(T result, ErrorDto error)
-            : base(error)
-        {
-            Result = result;
-        }
-
+        
         public OperationResult(ErrorDto error)
            : base(error)
         {
         }
-        public OperationResult(T result, IEnumerable<ErrorDto> errorList)
-            : base(errorList)
-        {
-            Result = result;
-        }
+        
         public OperationResult(T result, IEnumerable<ErrorDto> errorList,bool isSucess)
             : base(errorList,isSucess)
         {
@@ -72,11 +63,7 @@ namespace GBMProject.Business.Contracts
         public OperationResult(IEnumerable<ErrorDto> errorList)
            : base(errorList)
         {
-        }
-
-        public OperationResult()
-        {
-        }
+        }        
 
         public T Result { get; }
     }       

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GBMProject.Entities.Common
+﻿namespace GBMProject.Entities.Common
 {
     public class ErrorDto
     {
@@ -38,11 +32,6 @@ namespace GBMProject.Entities.Common
         {
             return new ErrorDto(code ?? "BE001", message, ExternalError);
 
-        }
-        public static ErrorDto Build(string message, string code, ushort type)
-        {
-            return new ErrorDto(code, message, type);
-
-        }
+        }        
     }
 }

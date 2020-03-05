@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.Entities.GbmDto
 {
@@ -19,7 +14,7 @@ namespace GBMProject.Entities.GbmDto
         [JsonProperty(PropertyName = "issuerName")]
         public string IssuerName { get; set; }
         [JsonProperty(PropertyName = "totalShares")]
-        public uint TotalShares { get; set; }
+        public int TotalShares { get; set; }
         [JsonProperty(PropertyName = "sharePrice")]
         public decimal SharePrice { get; set; }        
     }

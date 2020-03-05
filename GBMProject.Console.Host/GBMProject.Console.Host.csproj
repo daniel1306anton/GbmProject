@@ -49,5 +49,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GBMProject.Entities\GBMProject.Entities.csproj">
+      <Project>{46A4EF9C-BB54-4C29-B534-FEA036D044D9}</Project>
+      <Name>GBMProject.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GBMProject.Factory\GBMProject.Factory.csproj">
+      <Project>{3E775001-D6EF-4DB6-9CBA-0BC25CE89E0E}</Project>
+      <Name>GBMProject.Factory</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

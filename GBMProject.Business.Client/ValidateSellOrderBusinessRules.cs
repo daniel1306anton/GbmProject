@@ -5,8 +5,6 @@ using GBMProject.Entities.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GBMProject.Business.Client
 {
@@ -30,7 +28,7 @@ namespace GBMProject.Business.Client
             goodOrder.AddRange(request.OrderList.Where(
                 x => {
                     var correct = true;
-                    if(!validOperation.Any(y => y == x.Operation)) 
+                    if(!validOperation.Any(y => y == x.Operation) || (x.TotalShares <= 0)) 
                     {
                         correct = false;
                         messageErrorList.Add(ErrorDto.BuildUser(
@@ -38,7 +36,7 @@ namespace GBMProject.Business.Client
                             INVALID_OPERATION_CODE));
                         return correct;
                     }
-                    if(!(x.TimeStamp >= InitialHourDay && x.TimeStamp <= FinalHourDay))
+                    if(!(x.TimeStamp.TimeOfDay >= InitialHourDay && x.TimeStamp.TimeOfDay <= FinalHourDay))
                     {
                         correct = false;
                         messageErrorList.Add(ErrorDto.BuildUser(

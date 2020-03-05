@@ -1,5 +1,4 @@
-﻿using GBMProject.Business.Client.CoreFiles;
-using GBMProject.Business.Contracts;
+﻿using GBMProject.Business.Contracts;
 using GBMProject.Entities.Common;
 using GBMProject.Entities.Request;
 using GBMProject.Entities.Response;
